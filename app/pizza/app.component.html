@@ -1,4 +1,4 @@
-<div id="pizza" *ngFor='#pizza of pizzas'>
+<div id="pizza" *ngFor='let pizza of pizzas'>
   <div *ngIf="!pizza.soldOut" class="item">
     <div class="content">
       <h1> {{pizza.name}} ({{pizza.weight}}) g </h1>

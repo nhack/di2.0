@@ -1,5 +1,5 @@
-import {Component} from 'angular2/core';
-import {ViewEncapsulation} from 'angular2/core';
+import {Component} from '@angular/core';
+import {ViewEncapsulation} from '@angular/core';
 import {TabsComponent} from './components/tabs/tabs.component';
 import {Pizza} from './domain/pizza';
 import {PIZZAS} from './domain/data';

@@ -1,6 +1,6 @@
 <div class="reviews">
   <h4>Reviews</h4>
-  <blockquote *ngFor="#review of reviews">
+  <blockquote *ngFor="let review of reviews">
     <b> Stars: {{review.stars}}</b> {{review.body}}
     <cite>by: {{review.author}}</cite>
   </blockquote>

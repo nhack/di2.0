@@ -1,4 +1,4 @@
-import {Component, Input} from 'angular2/core';
+import {Component, Input} from '@angular/core';
 import {ReviewsComponent} from '../reviews/reviews.component';
 import {Pizza} from '../../domain/pizza';
 
