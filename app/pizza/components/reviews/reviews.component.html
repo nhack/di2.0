@@ -1,0 +1,28 @@
+<div class="reviews">
+  <h4>Reviews</h4>
+  <blockquote *ngFor="#review of reviews">
+    <b> Stars: {{review.stars}}</b> {{review.body}}
+    <cite>by: {{review.author}}</cite>
+  </blockquote>
+  <blockquote>
+    <b> Stars: {{newReview?.stars}}</b> {{newReview?.body}}
+    <cite>by: {{newReview?.author}}</cite>
+  </blockquote>
+  <h4>Submit a review</h4>
+  <form class="new" (ngSubmit)="onSubmit()" #newForm="ngForm">
+    <select class="form-control" [(ngModel)]="newReview.stars" required ngControl="stars">
+      <option disabled>Rate the Product</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <textarea placeholder="Write a short review for the pizza..." class="form-control" [(ngModel)]="newReview.body"></textarea>
+    <input type="email" placeholder="jimmyDean@example.org" class="form-control" [(ngModel)]="newReview.author" required #author="ngForm" ngControl="author">
+    <div class="alert error" [class.hide]="author.valid || author.pristine">
+      Author is requried!
+    </div>
+    <button type="submit" class="flat right submit" [disabled]="!newForm.form.valid">Submit Review</button>
+  </form>
+</div>

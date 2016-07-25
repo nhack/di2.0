@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "sourceMap": true,
+    "removeComments": false,
+    "noImplicitAny": false,
+    "module": "system",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  },
+  "formatCodeOptions": {
+    "indentSize": 2,
+    "tabSize": 2
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

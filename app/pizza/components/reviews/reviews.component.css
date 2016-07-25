@@ -1,0 +1,10 @@
+div.reviews .new {
+  display: flex;
+  flex-direction: column;
+  width: 330px;
+  padding-left: 40px;
+}
+
+div.reviews .new * {
+  margin-bottom: 5px;
+}

@@ -1,0 +1,43 @@
+.tabs {
+  width: 100%;
+}
+
+.tabs ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tabs ul li {
+  display: inline;
+}
+
+.tabs ul li a {
+  border: 1px solid #808080;
+  color: black;
+  cursor: pointer;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px 4px 0 0;
+}
+
+.tabs ul li a:hover {
+  background: #e6e3e3;
+}
+
+.tabs ul li a.active {
+  background-color: 75DE79;
+}
+
+.panel {
+  min-height: 100px;
+  border: 1px solid #808080;
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+}
+
+.panel blockquote {
+  border-left: 4px solid #e6e3e3;
+  padding-left: 10px;
+}
