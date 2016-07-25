@@ -1,10 +1,10 @@
 import {Component, Input} from 'angular2/core';
-import {Review} from './review';
+import {Review} from '../../domain/review';
 
 @Component({
   selector: 'reviews',
-  templateUrl: 'app/reviews.component.html',
-  styleUrls: ['app/reviews.component.css'],
+  templateUrl: 'app/pizza/components/reviews/reviews.component.html',
+  styleUrls: ['app/pizza/components/reviews/reviews.component.css'],
 })
 export class ReviewsComponent {
 

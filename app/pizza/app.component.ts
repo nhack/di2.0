@@ -6,8 +6,8 @@ import {PIZZAS} from './domain/data';
 
 @Component({
   selector: 'my-app',
-  templateUrl: 'app/app.component.html',
-  styleUrls: ['app/app.component.css'],
+  templateUrl: 'app/pizza/app.component.html',
+  styleUrls: ['app/pizza/app.component.css'],
   encapsulation: ViewEncapsulation.None,
   directives: [TabsComponent]
 })
