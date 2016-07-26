@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { ViewEncapsulation } from '@angular/core';
 
 import { TabsComponent } from './components/tabs/tabs.component';
-import { PizzaFileService } from './service/pizzaFile.service';
+import { PizzaService } from './service/pizza.service';
+import { PizzaFileSortedService } from './service/pizzaFileSorted.service';
 
 import { Pizza } from './domain/pizza';
 
@@ -15,7 +16,7 @@ import { Pizza } from './domain/pizza';
 })
 export class AppComponent {
 
-  private pizzaService: PizzaFileService = new PizzaFileService();
+  private pizzaService: PizzaService = new PizzaFileSortedService();
   private pizzas: Pizza[];
 
   constructor() {
