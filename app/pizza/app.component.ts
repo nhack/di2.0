@@ -1,8 +1,10 @@
-import {Component} from '@angular/core';
-import {ViewEncapsulation} from '@angular/core';
-import {TabsComponent} from './components/tabs/tabs.component';
-import {Pizza} from './domain/pizza';
-import {PIZZAS} from './domain/data';
+import { Component } from '@angular/core';
+import { ViewEncapsulation } from '@angular/core';
+
+import { TabsComponent } from './components/tabs/tabs.component';
+import { PizzaFileService } from './service/pizzaFile.service';
+
+import { Pizza } from './domain/pizza';
 
 @Component({
   selector: 'my-app',
@@ -13,9 +15,10 @@ import {PIZZAS} from './domain/data';
 })
 export class AppComponent {
 
+  private pizzaService: PizzaFileService = new PizzaFileService();
   private pizzas: Pizza[];
 
   constructor() {
-    this.pizzas = PIZZAS;
+    this.pizzas = this.pizzaService.getPizzas();
   }
 }
