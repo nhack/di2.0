@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
-import { ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, provide, Inject } from '@angular/core';
 
 import { TabsComponent } from './components/tabs/tabs.component';
-import { PizzaService } from './service/pizza.service';
+import { PizzaService, PIZZA_SERVICE } from './service/pizza.service';
+import { PizzaFileService } from './service/pizzaFile.service';
 import { PizzaFileSortedService } from './service/pizzaFileSorted.service';
 
 import { Pizza } from './domain/pizza';
@@ -13,13 +13,13 @@ import { Pizza } from './domain/pizza';
   styleUrls: ['app/pizza/app.component.css'],
   encapsulation: ViewEncapsulation.None,
   directives: [TabsComponent],
-  providers: [PizzaFileSortedService]
+  providers: [provide(PIZZA_SERVICE, { useClass: PizzaFileSortedService })]
 })
 export class AppComponent {
 
   private pizzas: Pizza[];
 
-  constructor(private pizzaService: PizzaFileSortedService) {
+  constructor( @Inject(PIZZA_SERVICE) private pizzaService: PizzaService) {
     this.pizzas = this.pizzaService.getPizzas();
   }
 }
