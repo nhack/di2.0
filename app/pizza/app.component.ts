@@ -12,14 +12,14 @@ import { Pizza } from './domain/pizza';
   templateUrl: 'app/pizza/app.component.html',
   styleUrls: ['app/pizza/app.component.css'],
   encapsulation: ViewEncapsulation.None,
-  directives: [TabsComponent]
+  directives: [TabsComponent],
+  providers: [PizzaFileSortedService]
 })
 export class AppComponent {
 
-  private pizzaService: PizzaService = new PizzaFileSortedService();
   private pizzas: Pizza[];
 
-  constructor() {
+  constructor(private pizzaService: PizzaFileSortedService) {
     this.pizzas = this.pizzaService.getPizzas();
   }
 }
